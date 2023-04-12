@@ -1,2 +1,0 @@
-!function(){const a=new URLSearchParams({api_key:"404ca53f902a08bf3140e0fd0ad0a560"});fetch(`https://api.themoviedb.org/3/movie/popular?${a}`).then((a=>{if(!a.ok)throw new Error(a.status);return a.json()}))}(),function(a){const e=new URLSearchParams({api_key:"404ca53f902a08bf3140e0fd0ad0a560",query:`${a}`});fetch(`https://api.themoviedb.org/3/search/movie?${e}`).then((a=>{if(!a.ok)throw new Error(a.status);return a.json()}))}("avatar");
-//# sourceMappingURL=index.e5daf628.js.map

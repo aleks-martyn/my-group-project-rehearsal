@@ -1,2 +1,0 @@
-!function(){var a,t,n="https://api.themoviedb.org/3/",c="404ca53f902a08bf3140e0fd0ad0a560";a=new URLSearchParams({api_key:"".concat(c)}),t="".concat(n,"movie/popular?").concat(a),fetch(t).then((function(a){if(!a.ok)throw new Error(a.status);return a.json()})),function(a){var t=new URLSearchParams({api_key:"".concat(c),query:"".concat(a)}),o="".concat(n,"search/movie?").concat(t);fetch(o).then((function(a){if(!a.ok)throw new Error(a.status);return a.json()}))}("avatar")}();
-//# sourceMappingURL=index.b6437298.js.map
