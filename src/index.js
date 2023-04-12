@@ -2,6 +2,7 @@ import Pagination from 'tui-pagination';
 import 'tui-pagination/dist/tui-pagination.min.css';
 
 const galleryEl = document.querySelector('.gallery');
+const paginationContainerEl = document.querySelector('#tui-pagination-container');
 const BASE_URL = 'https://api.themoviedb.org/3/';
 const API_KEY = '404ca53f902a08bf3140e0fd0ad0a560';
 const BASE_IMAGE_URL = 'https://image.tmdb.org/t/p/';
@@ -15,9 +16,10 @@ const IMAGE_SIZE = 'w200';
 
 function fetchPopularMovies() {
   const searchParams = new URLSearchParams({
-    api_key: `${API_KEY}`,
+      api_key: `${API_KEY}`,
+      page: 1,
   });
-
+    console.log(searchParams);
   const url = `${BASE_URL}movie/popular?${searchParams}`;
 
   return fetch(url).then(response => {
