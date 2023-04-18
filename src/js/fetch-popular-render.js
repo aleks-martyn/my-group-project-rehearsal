@@ -2,6 +2,7 @@ import Pagination from 'tui-pagination';
 import 'tui-pagination/dist/tui-pagination.min.css';
 import fetchPopularMovies from './fetch-popular';
 import renderGallery from './render-gallery';
+import setScrollToUp from './set-scroll';
 
 export const BASE_URL = 'https://api.themoviedb.org/3/';
 export const API_KEY = '404ca53f902a08bf3140e0fd0ad0a560';
