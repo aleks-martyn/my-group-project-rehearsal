@@ -19,10 +19,10 @@ const pagination = new Pagination(container, {
 
 let pageNumber = 1;
 
-fetchPopularMovies(API_KEY, BASE_URL, pageNumber)
+fetchPopularMovies(pageNumber)
   .then(data => {
     const { page, results, total_pages, total_results } = data;
-    return renderGallery(results, API_KEY, BASE_URL);
+    return renderGallery(results);
   })
   .then(async res => {
     // container.style.display = 'block';
@@ -37,11 +37,11 @@ function handleTuiContainerClick(event) {
   pageNumber = pagination.getCurrentPage();
   setScrollToUp();
 
-  fetchPopularMovies(API_KEY, BASE_URL, pageNumber)
+  fetchPopularMovies(pageNumber)
     .then(data => {
       const { page, results, total_pages, total_results } = data;
 
-      return renderGallery(results, API_KEY, BASE_URL);
+      return renderGallery(results);
     })
     .then(res => {
     
