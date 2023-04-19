@@ -1,12 +1,12 @@
-import getGenres from './get-genres';
-import { fetchGenres } from './api';
+import getGenresById from './get-genres-by-id';
+import { fetchGenresList } from './api';
 import movieCardTpl from './templates/template-movie-card.hbs';
 
 export const BASE_IMAGE_URL = 'https://image.tmdb.org/t/p/';
 const NO_POSTER = `https://i.ibb.co/r76r6Vt/oie-30214851-Ms-Wl-PTS0.png`;
 
-export default async function renderGallery(movies, api_key, base_url) {
-  const genres = await fetchGenres(api_key, base_url);
+export default async function renderGallery(movies) {
+  const genres = await fetchGenresList();
 
   return movies
     .map(
@@ -19,7 +19,7 @@ export default async function renderGallery(movies, api_key, base_url) {
         id,
       } = {}) => {
         const checkGenres = genre_ids
-          ? getGenres(genre_ids, genres)
+          ? getGenresById(genre_ids, genres)
           : 'Unknown';
         const releaseYear = release_date
           ? release_date.slice(0, 4)
