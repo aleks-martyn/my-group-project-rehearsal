@@ -1,5 +1,5 @@
 import axios from 'axios';
-export { fetchPopularMovies, fetchGenres, fetchMovies };
+export { fetchPopularMovies, fetchGenresList, fetchMovieByKeyword };
 
 const BASE_URL = 'https://api.themoviedb.org/3/';
 const API_KEY = '404ca53f902a08bf3140e0fd0ad0a560';
@@ -18,7 +18,7 @@ async function fetchPopularMovies(pageNumber) {
   return data;
 }
 
-async function fetchGenres() {
+async function fetchGenresList() {
   const searchParams = new URLSearchParams({
     api_key: `${API_KEY}`,
     language: 'en-US',
@@ -31,7 +31,7 @@ async function fetchGenres() {
   return data.genres;
 }
 
-async function fetchMovies(searchQuery) {
+async function fetchMovieByKeyword(searchQuery) {
   const searchParams = new URLSearchParams({
     api_key: `${API_KEY}`,
     query: `${searchQuery}`,
