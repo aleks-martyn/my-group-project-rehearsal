@@ -86,7 +86,21 @@ async function fetchTrendingMovies() {
   return data;
 }
 
+async function fetchConfig() {
+  const searchParams = new URLSearchParams({
+    api_key: `${API_KEY}`,
+  });
+
+  const url = `${BASE_URL}configuration?${searchParams}`;
+  const dataObj = await axios.get(url);
+  const { data } = dataObj;
+
+  return data;
+}
+
 fetchTrendingMovies().then(data => {
   console.log(data);
   const { page, results, total_pages, total_results } = data;
 });
+
+fetchConfig();
