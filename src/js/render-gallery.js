@@ -25,7 +25,7 @@ export default async function renderGallery(movies) {
           ? release_date.slice(0, 4)
           : 'Unknoun';
         const poster = poster_path
-          ? `${BASE_IMAGE_URL}w500${poster_path}`
+          ? `${BASE_IMAGE_URL}w342${poster_path}`
           : NO_POSTER;
         const titleMovie = title.toUpperCase();
 
