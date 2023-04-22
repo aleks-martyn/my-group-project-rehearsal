@@ -8,6 +8,21 @@ p {
 
 body {
   margin: 0;
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 0.03em;
+  font-size: 14px;
+  line-height: 16px;
+  font-style: normal;
+  font-weight: 500;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+
+  @media screen and (min-width: 768px) {
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-top: 32px;
+  }
 }
 
 img {
@@ -27,6 +42,12 @@ address {
   font-style: normal;
 }
 
-button {
+button,
+a,
+input {
   cursor: pointer;
+}
+
+a {
+  text-decoration: none;
 }
