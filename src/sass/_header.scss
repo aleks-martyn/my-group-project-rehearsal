@@ -1,4 +1,7 @@
 .container--header {
+  position: relative;
+  border-radius: 10px;
+  background-color: #687474;
   @media screen and (min-width: 768px) {
     display: flex;
   }
@@ -7,7 +10,6 @@
 .header {
   height: 460px;
   margin-bottom: 20px;
-  background-color: darkslategray;
 
   @media screen and (min-width: 768px) {
     height: 222px;
@@ -17,4 +19,33 @@
   @media screen and (min-width: 1280px) {
     height: 316px;
   }
+}
+
+.nav__list {
+  display: flex;
+  gap: 4px;
+}
+
+.nav__link {
+  display: inline-block;
+  font-size: 12px;
+  line-height: 14px;
+  color: #000;
+  background-color: #fff;
+  border-radius: 100px;
+  padding: 10px 26px;
+  transition: color 0.25s linear, background-color 0.25s linear;
+
+  @media screen and (min-width: 768px) {
+    padding: 12px 24px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    padding: 14px 32px;
+  }
+}
+
+.nav__link--current {
+  color: #fff;
+  background-color: #000;
 }
