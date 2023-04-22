@@ -25,3 +25,65 @@
   display: flex;
   gap: 4px;
 }
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 354px;
+
+  @media screen and (min-width: 768px) {
+    margin: 0;
+    margin-top: 105px;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  @media screen and (min-width: 1280px) {
+    margin-top: 151px;
+  }
+}
+
+.logo__link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+
+  @media screen and (min-width: 768px) {
+  }
+
+  @media screen and (min-width: 1280px) {
+    gap: 16px;
+  }
+}
+
+.logo__icon {
+  @media screen and (min-width: 768px) {
+    width: 40px;
+    height: 40px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 59px;
+    height: 59px;
+  }
+}
+
+.logo__text {
+  font-size: 32px;
+  line-height: 1.19;
+  color: #fff;
+  font-style: normal;
+  font-weight: 500;
+
+  @media screen and (min-width: 768px) {
+    font-size: 40px;
+    line-height: 1.18;
+  }
+
+  @media screen and (min-width: 1280px) {
+    font-size: 64px;
+    line-height: 1.17;
+  }
+}
