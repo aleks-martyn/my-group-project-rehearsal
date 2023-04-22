@@ -1,0 +1,103 @@
+.nav__el {
+  display: inline-block;
+  font-size: 12px;
+  line-height: 1.17;
+  border-radius: 100px;
+  transition: color 0.25s linear, background-color 0.25s linear;
+}
+
+.nav__link {
+  color: #000;
+  background-color: #fff;
+}
+
+.nav__link--current {
+  color: #fff;
+  background-color: #000;
+}
+
+.nav__link--home {
+  padding: 10px 26px;
+
+  @media screen and (min-width: 768px) {
+    padding: 12px 24px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    padding: 14px 32px;
+  }
+}
+
+.nav__link--lib {
+  padding: 10px 22px;
+
+  @media screen and (min-width: 768px) {
+    padding: 12px 20px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    padding: 14px 24px;
+  }
+}
+
+.lib-btn {
+  color: #b92f2c;
+  background-color: #fff;
+}
+
+.lib-btn--current {
+  color: #fff;
+  background-color: #b92f2c;
+}
+
+.lib-btn--watched {
+  padding: 10px 23px;
+
+  @media screen and (min-width: 768px) {
+    padding: 12px 23px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    padding: 14px 32px;
+  }
+}
+
+.lib-btn--queue {
+  padding: 10px 24px;
+
+  @media screen and (min-width: 768px) {
+    padding: 12px 24px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    padding: 14px 24px;
+  }
+}
+
+.mod-btn--watched {
+  padding: 10px 12px;
+
+  @media screen and (min-width: 768px) {
+    padding: 12px 18px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    padding: 14px 32px;
+  }
+}
+
+.mod-btn--queue {
+  padding: 10px 14px;
+
+  @media screen and (min-width: 768px) {
+    padding: 12px 18px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    padding: 14px 24px;
+  }
+}
+
+.mod-btn--border {
+  border: 1px solid #000;
+}
