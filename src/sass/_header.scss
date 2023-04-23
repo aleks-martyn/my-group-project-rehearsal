@@ -1,9 +1,16 @@
 .container--header {
   position: relative;
+  padding: 14px;
   border-radius: 10px;
   background-color: #687474;
+
   @media screen and (min-width: 768px) {
     display: flex;
+    padding: 16px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    padding: 16px 32px;
   }
 }
 
@@ -21,9 +28,31 @@
   }
 }
 
+.nav {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 4px;
+    margin-bottom: 105px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    margin-bottom: 151px;
+    gap: 8px;
+  }
+}
+
 .nav__list {
   display: flex;
   gap: 4px;
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: 8px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    gap: 8px;
+  }
 }
 
 .logo {
