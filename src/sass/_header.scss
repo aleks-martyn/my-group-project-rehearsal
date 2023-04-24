@@ -1,6 +1,7 @@
 .container--header {
   position: relative;
   padding: 14px;
+  padding-bottom: 20px;
   border-radius: 10px;
   background-color: #687474;
 
@@ -15,7 +16,6 @@
 }
 
 .header {
-  height: 460px;
   margin-bottom: 20px;
 
   @media screen and (min-width: 768px) {
@@ -57,6 +57,7 @@
 
 .nav__form {
   position: relative;
+  margin-bottom: 312px;
 }
 
 .nav__input {
@@ -91,11 +92,14 @@
   border: none;
 }
 
+.check {
+  position: absolute;
+}
+
 .logo {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 354px;
 
   @media screen and (min-width: 768px) {
     margin: 0;
@@ -150,5 +154,28 @@
   @media screen and (min-width: 1280px) {
     font-size: 64px;
     line-height: 1.17;
+  }
+}
+
+.header__error {
+  width: 170px;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 12px;
+  position: absolute;
+  color: #ffffff;
+  top: 98px;
+  left: 28px;
+
+  @media screen and (min-width: 768px) {
+    width: 150px;
+    top: 62px;
+    left: 32px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 170px;
+    top: 66px;
+    left: 48px;
   }
 }
