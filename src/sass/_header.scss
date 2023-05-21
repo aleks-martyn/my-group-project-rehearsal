@@ -7,6 +7,8 @@
 
   @media screen and (min-width: 768px) {
     display: flex;
+    gap: 80px;
+    flex-direction: column;
     padding: 16px;
   }
 
@@ -19,12 +21,7 @@
   margin-bottom: 20px;
 
   @media screen and (min-width: 768px) {
-    height: 222px;
     margin-bottom: 32px;
-  }
-
-  @media screen and (min-width: 1280px) {
-    height: 316px;
   }
 }
 
@@ -32,12 +29,11 @@
   @media screen and (min-width: 768px) {
     display: flex;
     flex-direction: row-reverse;
+    justify-content: flex-end;
     gap: 4px;
-    margin-bottom: 105px;
   }
 
   @media screen and (min-width: 1280px) {
-    margin-bottom: 151px;
     gap: 8px;
   }
 }
@@ -57,7 +53,10 @@
 
 .nav__form {
   position: relative;
-  margin-bottom: 312px;
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: 312px;
+  }
 }
 
 .nav__input {
@@ -103,13 +102,12 @@
 
   @media screen and (min-width: 768px) {
     margin: 0;
-    margin-top: 105px;
     align-items: center;
     justify-content: flex-start;
   }
 
   @media screen and (min-width: 1280px) {
-    margin-top: 151px;
+    margin-top: 0;
   }
 }
 
