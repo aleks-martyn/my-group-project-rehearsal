@@ -1,19 +1,15 @@
 .container--header {
   position: relative;
-  padding: 14px;
-  padding-bottom: 20px;
+  padding: 14px 14px 20px 14px;
   border-radius: 10px;
   background-color: #687474;
 
   @media screen and (min-width: 768px) {
-    display: flex;
-    gap: 80px;
-    flex-direction: column;
     padding: 16px;
   }
 
   @media screen and (min-width: 1280px) {
-    padding: 16px 32px;
+    padding: 16px 32px 32px 32px;
   }
 }
 
@@ -31,10 +27,12 @@
     flex-direction: row-reverse;
     justify-content: flex-end;
     gap: 4px;
+    margin-bottom: 105px;
   }
 
   @media screen and (min-width: 1280px) {
     gap: 8px;
+    margin-bottom: 151px;
   }
 }
 
@@ -84,30 +82,44 @@
   right: 14px;
   display: flex;
   background-color: transparent;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 0;
-  padding-right: 0;
+  padding: 8px 0;
   border: none;
 }
 
 .check {
   position: absolute;
+
+  @media screen and (max-width: 767px) {
+    top: 14px;
+    right: 14px;
+  }
+
+  @media screen and (min-width: 768px) {
+    bottom: 16px;
+    right: 16px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    bottom: 32px;
+    right: 32px;
+  }
+}
+
+.check-label {
+  display: block;
+  width: 32px;
+  height: 15px;
+  background-color: #fff;
+  border-radius: 50px;
+  transition: color 0.25s linear;
 }
 
 .logo {
   display: flex;
-  align-items: center;
   justify-content: center;
 
   @media screen and (min-width: 768px) {
-    margin: 0;
-    align-items: center;
     justify-content: flex-start;
-  }
-
-  @media screen and (min-width: 1280px) {
-    margin-top: 0;
   }
 }
 
@@ -115,10 +127,6 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  justify-content: center;
-
-  @media screen and (min-width: 768px) {
-  }
 
   @media screen and (min-width: 1280px) {
     gap: 16px;
@@ -156,14 +164,14 @@
 }
 
 .header__error {
+  position: absolute;
+  top: 98px;
+  left: 28px;
   width: 170px;
   font-weight: 400;
   font-size: 10px;
   line-height: 12px;
-  position: absolute;
-  color: #ffffff;
-  top: 98px;
-  left: 28px;
+  color: #fff;
 
   @media screen and (min-width: 768px) {
     width: 150px;
