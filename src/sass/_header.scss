@@ -3,13 +3,37 @@
   padding: 14px 14px 20px 14px;
   border-radius: 10px;
   background-color: #687474;
+  background-image: url(/src/images/background-mob@x1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: url(/src/images/background-mob@x2.jpg);
+  }
 
   @media screen and (min-width: 768px) {
     padding: 16px;
+    background-image: url(/src/images/background-tab@x1.jpg);
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url(/src/images/background-tab@x2.jpg);
+    }
   }
 
   @media screen and (min-width: 1280px) {
     padding: 16px 32px 32px 32px;
+    background-image: url(/src/images/background-desk@x1.jpg);
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url(/src/images/background-desk@x2.jpg);
+    }
   }
 }
 
