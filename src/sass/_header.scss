@@ -46,6 +46,8 @@
 }
 
 .nav {
+  margin-bottom: 312px;
+
   @media screen and (min-width: 768px) {
     display: flex;
     flex-direction: row-reverse;
@@ -75,10 +77,6 @@
 
 .nav__form {
   position: relative;
-
-  @media screen and (max-width: 767px) {
-    margin-bottom: 312px;
-  }
 }
 
 .nav__input {
@@ -208,4 +206,20 @@
     top: 66px;
     left: 48px;
   }
+}
+
+.nav-lib {
+  margin-bottom: 300px;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 105px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    margin-bottom: 151px;
+  }
+}
+
+.nav__list--lib {
+  margin-bottom: 0;
 }
