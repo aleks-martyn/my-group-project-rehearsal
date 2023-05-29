@@ -1,7 +1,7 @@
 <header class="header">
   <div class="container container--header">
-    <nav class="nav">
-      <ul class="nav__list">
+    <nav class="nav-lib">
+      <ul class="nav__list nav__list--lib">
         <li>
           <a href="./index.html" class="nav__el nav__link nav__link--home"
             >HOME</a
@@ -48,5 +48,22 @@
         <span class="logo__text">Filmoteka </span>
       </a>
     </div>
+
+    <ul class="watched__list">
+      <li class="watched__item">
+        <button type="button" class="watched__link" data-watched>
+          WATCHED
+        </button>
+      </li>
+      <li class="watched__item">
+        <button
+          type="button"
+          class="watched__link watched__link-queue"
+          data-queue
+        >
+          QUEUE
+        </button>
+      </li>
+    </ul>
   </div>
 </header>
