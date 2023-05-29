@@ -85,7 +85,6 @@
   padding-left: 15px;
   border-radius: 100px;
   outline: none;
-  border: none;
 
   @media screen and (min-width: 768px) {
     width: 165px;
@@ -105,7 +104,6 @@
   display: flex;
   background-color: transparent;
   padding: 8px 0;
-  border: none;
 }
 
 .check {
@@ -227,6 +225,11 @@
 .watched__list {
   display: flex;
   gap: 4px;
+  justify-content: center;
+
+  @media screen and (max-width: 767px) {
+    margin-top: 16px;
+  }
 
   @media screen and (min-width: 768px) {
     position: absolute;
