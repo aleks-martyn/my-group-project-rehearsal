@@ -223,3 +223,19 @@
 .nav__list--lib {
   margin-bottom: 0;
 }
+
+.watched__list {
+  display: flex;
+  gap: 4px;
+
+  @media screen and (min-width: 768px) {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    gap: 8px;
+    right: 32px;
+  }
+}
