@@ -23,14 +23,13 @@ fetchPopularMovies(pageNumber)
   })
   .then(async res => {
     // container.style.display = 'block';
-    return moviesEl.innerHTML = res;
+    return (moviesEl.innerHTML = res);
   })
   .catch(console.log);
 
 container.addEventListener('click', handleTuiContainerClick);
 
 function handleTuiContainerClick(event) {
-  
   pageNumber = pagination.getCurrentPage();
   setScrollToUp();
 
@@ -41,7 +40,6 @@ function handleTuiContainerClick(event) {
       return renderGallery(results);
     })
     .then(res => {
-    
       return (moviesEl.innerHTML = res);
     })
     .catch(console.log);
