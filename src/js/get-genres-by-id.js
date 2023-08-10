@@ -1,7 +1,7 @@
-export default function getGenresById(arrayId, genresArr) {
+export default function getGenresById(arrayId, genres) {
   const arr = [];
 
-  for (const genre of genresArr) {
+  for (const genre of genres) {
     if (arrayId === 'N/A' || arrayId.length === 0) {
       arr.push('Other');
       break;
