@@ -35,10 +35,11 @@ async function fetchGenresList() {
   return data.genres;
 }
 
-async function fetchMovieByKeyword(searchQuery) {
+async function fetchMovieByKeyword(searchQuery, pageNumber) {
   const searchParams = new URLSearchParams({
     api_key: `${API_KEY}`,
     query: `${searchQuery}`,
+    page: `${pageNumber}`,
   });
 
   const url = `${BASE_URL}search/movie?${searchParams}`;
