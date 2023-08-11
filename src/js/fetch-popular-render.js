@@ -1,11 +1,9 @@
 import Pagination from 'tui-pagination';
 import 'tui-pagination/dist/tui-pagination.min.css';
 import { fetchPopularMovies } from './api';
+import { moviesEl, container } from './ref-index';
 import renderGallery from './render-gallery';
 import setScrollToUp from './set-scroll';
-
-const moviesEl = document.querySelector('.films');
-const container = document.getElementById('tui-pagination-container');
 
 const pagination = new Pagination(container, {
   totalItems: 10000,
