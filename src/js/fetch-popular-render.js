@@ -20,7 +20,6 @@ fetchPopularMovies(pageNumber)
     return renderGallery(results);
   })
   .then(async res => {
-    // container.style.display = 'block';
     return (moviesEl.innerHTML = res);
   })
   .catch(console.log);
