@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { API_KEY, BASE_URL } from './constants';
 export {
   fetchPopularMovies,
   fetchGenresList,
@@ -6,9 +7,6 @@ export {
   fetchMovieById,
   fetchTrailerById,
 };
-
-const BASE_URL = 'https://api.themoviedb.org/3/';
-const API_KEY = '404ca53f902a08bf3140e0fd0ad0a560';
 
 async function fetchPopularMovies(pageNumber) {
   const searchParams = new URLSearchParams({
