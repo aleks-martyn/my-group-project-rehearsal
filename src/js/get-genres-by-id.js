@@ -1,18 +1,18 @@
-export default function getGenresById(arrayId, genres) {
-  const arr = [];
+export default function getGenresById(genreIds, genres) {
+  const decodedGenres = [];
 
   for (const genre of genres) {
-    if (arrayId === 'N/A' || arrayId.length === 0) {
-      arr.push('Other');
+    if (genreIds === 'N/A' || genreIds.length === 0) {
+      decodedGenres.push('Other');
       break;
-    } else if (arrayId.includes(genre.id)) {
-      arr.push(genre.name);
+    } else if (genreIds.includes(genre.id)) {
+      decodedGenres.push(genre.name);
     }
   }
 
-  if (arr.length > 2) {
-    arr.splice(2, arr.length - 2, 'Other');
+  if (decodedGenres.length > 2) {
+    decodedGenres.splice(2, decodedGenres.length - 2, 'Other');
   }
 
-  return arr.join(', ');
+  return decodedGenres.join(', ');
 }
