@@ -12,9 +12,9 @@ const pagination = new Pagination(container, {
   centerAlign: true,
 });
 
-let pageNumber = 1;
+let page = 1;
 
-fetchPopularMovies(pageNumber)
+fetchPopularMovies(page)
   .then(data => {
     const { page, results, total_pages, total_results } = data;
     return renderGallery(results);
@@ -27,10 +27,10 @@ fetchPopularMovies(pageNumber)
 container.addEventListener('click', handleTuiContainerClick);
 
 function handleTuiContainerClick(event) {
-  pageNumber = pagination.getCurrentPage();
+  page = pagination.getCurrentPage();
   setScrollToUp();
 
-  fetchPopularMovies(pageNumber)
+  fetchPopularMovies(page)
     .then(data => {
       const { page, results, total_pages, total_results } = data;
 
