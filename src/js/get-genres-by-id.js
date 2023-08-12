@@ -1,11 +1,10 @@
 export default function getGenresById(genreIds, genres) {
+  if (genreIds === 'N/A' || genreIds.length === 0) return 'Other';
+
   const decodedGenres = [];
 
   for (const genre of genres) {
-    if (genreIds === 'N/A' || genreIds.length === 0) {
-      decodedGenres.push('Other');
-      break;
-    } else if (genreIds.includes(genre.id)) {
+    if (genreIds.includes(genre.id)) {
       decodedGenres.push(genre.name);
     }
   }
