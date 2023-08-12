@@ -5,13 +5,6 @@ import { moviesEl, container } from './ref-index';
 import renderGallery from './render-gallery';
 import setScrollToUp from './set-scroll';
 
-const pagination = new Pagination(container, {
-  totalItems: 10000,
-  itemsPerPage: 20,
-  visiblePages: 5,
-  centerAlign: true,
-});
-
 let page = 1;
 
 fetchPopularMovies(page)
@@ -23,6 +16,13 @@ fetchPopularMovies(page)
     return (moviesEl.innerHTML = res);
   })
   .catch(console.log);
+
+const pagination = new Pagination(container, {
+  totalItems: 10000,
+  itemsPerPage: 20,
+  visiblePages: 5,
+  centerAlign: true,
+});
 
 container.addEventListener('click', handleTuiContainerClick);
 
