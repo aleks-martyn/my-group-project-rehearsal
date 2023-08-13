@@ -6,6 +6,8 @@ export {
   fetchMovieByKeyword,
   fetchMovieById,
   fetchTrailerById,
+  fetchTrendingMovies,
+  fetchConfig,
 };
 
 async function fetchPopularMovies(pageNumber) {
@@ -96,10 +98,3 @@ async function fetchConfig() {
 
   return data;
 }
-
-fetchTrendingMovies().then(data => {
-  console.log(data);
-  const { page, results, total_pages, total_results } = data;
-});
-
-fetchConfig();
