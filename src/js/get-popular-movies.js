@@ -4,8 +4,7 @@ import { moviesEl } from './ref-index';
 
 export default async function getPopularMovies(pageNumber) {
   try {
-    const { page, results, total_pages, total_results } =
-      await fetchPopularMovies(pageNumber);
+    const { results, total_results } = await fetchPopularMovies(pageNumber);
 
     const res = await renderGallery(results);
     return (moviesEl.innerHTML = res);
