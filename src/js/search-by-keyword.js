@@ -17,5 +17,10 @@ async function handleFormSubmit(event) {
   const query = inputEl.value;
   let page = 1;
 
+  if (inputEl.value.trim() === '') {
+    errorEl.style.display = 'block';
+    return;
+  }
+
   await getMovieByKeyword(query, page);
 }
