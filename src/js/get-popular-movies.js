@@ -1,10 +1,29 @@
+import Pagination from 'tui-pagination';
+import 'tui-pagination/dist/tui-pagination.min.css';
 import { fetchPopularMovies } from './api';
 import renderGallery from './render-gallery';
 import { moviesEl } from './ref-index';
+import { container } from './ref-index';
+import setScrollToUp from './set-scroll';
 
-export default async function getPopularMovies(pageNumber) {
+async function getPopularMovies() {
   try {
-    const { results, total_results } = await fetchPopularMovies(pageNumber);
+    const { results, total_results } = await fetchPopularMovies();
+
+    const pagination = new Pagination(container, {
+      totalItems: total_results,
+      itemsPerPage: 20,
+      visiblePages: 5,
+      centerAlign: true,
+    });
+
+    pagination.on('afterMove', async event => {
+      setScrollToUp();
+      const currentPage = event.page;
+      const { results } = await fetchPopularMovies(currentPage);
+      const res = await renderGallery(results);
+      return (moviesEl.innerHTML = res);
+    });
 
     const res = await renderGallery(results);
     return (moviesEl.innerHTML = res);
@@ -12,3 +31,5 @@ export default async function getPopularMovies(pageNumber) {
     console.log(error.message);
   }
 }
+
+getPopularMovies();
