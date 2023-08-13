@@ -1,21 +1,12 @@
 import Pagination from 'tui-pagination';
 import 'tui-pagination/dist/tui-pagination.min.css';
-import { fetchPopularMovies } from './api';
-import { moviesEl, container } from './ref-index';
-import renderGallery from './render-gallery';
+import getPopularMovies from './get-popular-movies';
+import { container } from './ref-index';
 import setScrollToUp from './set-scroll';
 
 let page = 1;
 
-fetchPopularMovies(page)
-  .then(data => {
-    const { page, results, total_pages, total_results } = data;
-    return renderGallery(results);
-  })
-  .then(async res => {
-    return (moviesEl.innerHTML = res);
-  })
-  .catch(console.log);
+getPopularMovies(page);
 
 const pagination = new Pagination(container, {
   totalItems: 10000,
@@ -26,18 +17,9 @@ const pagination = new Pagination(container, {
 
 container.addEventListener('click', handleTuiContainerClick);
 
-function handleTuiContainerClick(event) {
+async function handleTuiContainerClick(event) {
   page = pagination.getCurrentPage();
   setScrollToUp();
 
-  fetchPopularMovies(page)
-    .then(data => {
-      const { page, results, total_pages, total_results } = data;
-
-      return renderGallery(results);
-    })
-    .then(res => {
-      return (moviesEl.innerHTML = res);
-    })
-    .catch(console.log);
+  await getPopularMovies(page);
 }
