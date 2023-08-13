@@ -3,7 +3,7 @@ import 'tui-pagination/dist/tui-pagination.min.css';
 import { container } from './ref-index';
 import { fetchMovieByKeyword } from './api';
 import renderGallery from './render-gallery';
-import { moviesEl } from './ref-index';
+import { moviesEl, errorEl } from './ref-index';
 import setScrollToUp from './set-scroll';
 
 export default async function getMovieByKeyword(searchQuery, pageNumber) {
@@ -12,6 +12,11 @@ export default async function getMovieByKeyword(searchQuery, pageNumber) {
       searchQuery,
       pageNumber
     );
+
+    if (results.length === 0) {
+      errorEl.style.display = 'block';
+      return;
+    }
 
     const pagination = new Pagination(container, {
       totalItems: total_results,
