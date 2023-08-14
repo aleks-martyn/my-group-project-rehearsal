@@ -1,14 +1,9 @@
-import Pagination from 'tui-pagination';
-import 'tui-pagination/dist/tui-pagination.min.css';
 import getMovieByKeyword from './get-movie-by-keyword';
 import {
   searchFormEl,
   inputEl,
   errorEl,
-  moviesEl,
-  container,
 } from './ref-index';
-import setScrollToUp from './set-scroll';
 
 searchFormEl.addEventListener('submit', handleFormSubmit);
 
