@@ -22,5 +22,8 @@ async function handleFormSubmit(event) {
     return;
   }
 
+  if (inputEl.value.trim()) {
+    errorEl.style.display = 'none';
+  }
   await getMovieByKeyword(query, page);
 }
