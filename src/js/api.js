@@ -63,12 +63,12 @@ async function fetchMovieById(movieId) {
   return data;
 }
 
-async function fetchTrailerById(movie_id) {
+async function fetchTrailerById(movieId) {
   const searchParams = new URLSearchParams({
     api_key: `${API_KEY}`,
   });
 
-  const url = `${BASE_URL}movie/${movie_id}/videos?${searchParams}`;
+  const url = `${BASE_URL}movie/${movieId}/videos?${searchParams}`;
   const dataObj = await axios.get(url);
   const { data } = dataObj;
 
