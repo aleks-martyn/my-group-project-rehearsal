@@ -91,3 +91,25 @@
   gap: 8px;
   justify-content: space-around;
 }
+
+.modal__play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+  transition: fill 250ms linear;
+}
+
+.modal__play-icon {
+  fill: rgba(100%, 100%, 100%, 0.7);
+}
+
+.modal__play:hover .modal__play-icon {
+  fill: #b92f2c;
+}
