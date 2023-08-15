@@ -75,7 +75,19 @@
   }
 }
 
-.mod-btn--watched {
+.modal__btn {
+  color: #b92f2c;
+  background-color: rgba(80, 80, 80, 0.8);
+  border: 1px solid #b92f2c;
+}
+
+.modal__btn:hover,
+.modal__btn:focus {
+  color: #fff;
+  background-color: #b92f2c;
+}
+
+.modal__btn--watched {
   padding: 10px 12px;
 
   @media screen and (min-width: 768px) {
@@ -87,7 +99,7 @@
   }
 }
 
-.mod-btn--queue {
+.modal__btn--queue {
   padding: 10px 14px;
 
   @media screen and (min-width: 768px) {
@@ -101,4 +113,26 @@
 
 .mod-btn--border {
   border: 1px solid #000;
+}
+
+.modal__close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: transparent;
+  transition: fill 250ms linear;
+}
+
+.modal__close-icon {
+  fill: #fff;
+}
+
+.modal__close:hover .modal__close-icon {
+  fill: #b92f2c;
 }
