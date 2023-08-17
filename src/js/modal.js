@@ -1,19 +1,16 @@
 import * as basicLightbox from 'basiclightbox';
-import { fetchMovieById } from './api';
-import modalTpl from './templates/template-modal.hbs';
 import { moviesEl } from './ref-index';
+import getMovieById from './get-movie-by-id';
 
 moviesEl.addEventListener('click', handleMovieClick);
 
 async function handleMovieClick(event) {
-  if (
-    event.target.nodeName !== 'DIV' &&
-    event.target.nodeName !== 'LI' &&
-    event.target.nodeName !== 'IMG' &&
-    event.target.nodeName !== 'P' &&
-    event.target.nodeName !== 'B'
-  )
-    return;
+  const movieId = event.target.dataset.mvid;
 
-  if (!event.target.dataset.mvid) return;
+  if (!movieId) return;
+
+  const movie = await getMovieById(movieId);
+
+  const instance = basicLightbox.create(movie);
+  console.log(instance);
 }
