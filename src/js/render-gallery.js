@@ -25,13 +25,13 @@ export default async function renderGallery(movies) {
         const poster = poster_path
           ? `${BASE_IMAGE_URL}w500${poster_path}`
           : NO_POSTER;
-        const titleMovie = title.toUpperCase();
+        const movieTitle = title?.toUpperCase();
 
         return movieCardTpl({
           id,
           poster,
           original_title,
-          titleMovie,
+          movieTitle,
           checkGenres,
           releaseYear,
         });
