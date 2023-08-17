@@ -6,5 +6,14 @@ import { moviesEl } from './ref-index';
 moviesEl.addEventListener('click', handleMovieClick);
 
 async function handleMovieClick(event) {
-  console.log(event.target)
+  if (
+    event.target.nodeName !== 'DIV' &&
+    event.target.nodeName !== 'LI' &&
+    event.target.nodeName !== 'IMG' &&
+    event.target.nodeName !== 'P' &&
+    event.target.nodeName !== 'B'
+  )
+    return;
+
+  if (!event.target.dataset.mvid) return;
 }
