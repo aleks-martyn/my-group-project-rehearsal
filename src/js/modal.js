@@ -1,5 +1,5 @@
 import * as basicLightbox from 'basiclightbox';
-import { moviesEl } from './ref-index';
+import { moviesEl, bodyEl, basicLightboxEl } from './ref-index';
 import getMovieById from './get-movie-by-id';
 
 moviesEl.addEventListener('click', handleMovieClick);
@@ -10,7 +10,11 @@ async function handleMovieClick(event) {
   if (!movieId) return;
 
   const movie = await getMovieById(movieId);
-
+console.log(movie)
   const instance = basicLightbox.create(movie);
-  console.log(instance);
+
+  instance.show(() => {
+    const closeBtnEl = document.querySelector('modal__close');
+    bodyEl.classList.add('no-scroll');
+  });
 }
