@@ -18,21 +18,36 @@
   padding: 40px 20px;
   min-width: 280px;
 
+  @media screen and (max-width: 767px) {
+     max-width: 320px;
+    }
+
   @media screen and (min-width: 768px) {
     display: flex;
     gap: 20px;
+    width: 704px;
   }
 }
 
 .modal__picture-container {
   position: relative;
   margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (min-width: 768px) {
+    flex-shrink: 0;
+    margin-bottom: 0;
+  }
 }
 
 .modal__picture {
   position: relative;
-  min-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  
   height: 398px;
+  aspect-ratio: 2 / 3;
 }
 
 .modal__title {
