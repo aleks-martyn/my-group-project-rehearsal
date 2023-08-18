@@ -10,11 +10,11 @@ async function handleMovieClick(event) {
   if (!movieId) return;
 
   const movie = await getMovieById(movieId);
-console.log(movie)
+
   const instance = basicLightbox.create(movie);
 
   instance.show(() => {
     const closeBtnEl = document.querySelector('modal__close');
-    bodyEl.classList.add('no-scroll');
+    //bodyEl.classList.add('no-scroll');
   });
 }
