@@ -12,28 +12,17 @@ export default function renderMovieModal({
   vote_count,
   title,
 }) {
-  const poster = poster_path
-    ? `${BASE_IMAGE_URL}w500${poster_path}`
-    : NO_POSTER;
-
-  const vote = vote_average?.toFixed(1);
-  const moviePopularity = Math.round(popularity);
-  const originalTitle = original_title || title;
-  const movieTitle = title || original_title;
-  const about = overview || 'Not found';
-  const movieGenres = genres.map(genre => `${genre.name}`).toString();
-
-  console.log(movieGenres);
-
-  return movieModalTpl({
+  const movie = {
     id,
-    movieGenres,
-    poster,
-    originalTitle,
-    movieTitle,
-    moviePopularity,
-    about,
-    vote,
+    poster: poster_path ? `${BASE_IMAGE_URL}w500${poster_path}` : NO_POSTER,
+    vote: vote_average?.toFixed(1),
     votes: vote_count,
-  });
+    popularity: Math.round(popularity),
+    originalTitle: original_title || title,
+    title: title || original_title,
+    about: overview || 'Not found',
+    genres: genres.map(genre => genre.name).join(', '),
+  };
+
+  return movieModalTpl(movie);
 }
