@@ -1,6 +1,11 @@
 <div class='modal'>
   <div class='modal__picture-container'>
     <img class='modal__picture' src={{poster}} alt='icon-film' />
+    <button class='modal__play' type='button' data-mvid='${id}'>
+      <svg width='30' height='30'>
+        <use class='modal__play-icon' href='./symbol-defs.svg#icon-play_40px' />
+      </svg>
+    </button>
   </div>
 
   <div class='modal__info-container'>
@@ -45,14 +50,11 @@
       <button class='nav__el modal__btn modal__btn--queue' type='button'>ADD TO
         QUEUE</button>
     </div>
-
-    <button class='modal__close' type='button'>
-      <svg width='30' height='30'>
-        <use
-          class='modal__close-icon'
-          href='./symbol-defs.svg#icon-close_40px'
-        ></use>
-      </svg>
-    </button>
   </div>
+
+  <button class='modal__close' type='button'>
+    <svg width='30' height='30'>
+      <use class='modal__close-icon' href='./symbol-defs.svg#icon-close_40px' />
+    </svg>
+  </button>
 </div>
