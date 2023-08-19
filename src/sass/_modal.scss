@@ -16,24 +16,22 @@
 .modal {
   position: relative;
   padding: 40px 20px;
-  min-width: 280px;
-
-  @media screen and (max-width: 767px) {
-     max-width: 320px;
-    }
+  width: 280px;
 
   @media screen and (min-width: 768px) {
     display: flex;
     gap: 20px;
     width: 704px;
   }
+
+  @media screen and (min-width: 1280px) {
+    width: 806px;
+  }
 }
 
 .modal__picture-container {
   position: relative;
   margin-bottom: 20px;
-  margin-left: auto;
-  margin-right: auto;
 
   @media screen and (min-width: 768px) {
     flex-shrink: 0;
@@ -43,10 +41,16 @@
 
 .modal__picture {
   position: relative;
-  margin-left: auto;
-  margin-right: auto;
-  height: 398px;
+  height: 360px;
   aspect-ratio: 2 / 3;
+
+  @media screen and (min-width: 768px) {
+      height: 420px;
+    }
+
+  @media screen and (min-width: 1280px) {
+    height: 478px;
+  }
 }
 
 .modal__title {
@@ -107,8 +111,13 @@
 .modal__btn-container {
   display: flex;
   flex-wrap: nowrap;
-  gap: 8px;
-  justify-content: space-around;
+  gap: 4px;
+  justify-content: center;
+
+  @media screen and (min-width: 768px) {
+    gap: 8px;
+    justify-content: flex-start;
+  }
 }
 
 .modal__play {
