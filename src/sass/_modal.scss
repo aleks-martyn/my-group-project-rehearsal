@@ -144,4 +144,22 @@
 
 .modal__close {
   position: absolute;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: transparent;
+  transition: fill 250ms linear;
+}
+
+.modal__close-icon {
+  fill: #fff;
+}
+
+.modal__close:hover .modal__close-icon {
+  fill: #b92f2c;
 }
