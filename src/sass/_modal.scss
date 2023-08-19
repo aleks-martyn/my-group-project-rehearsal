@@ -18,10 +18,10 @@
   padding: 40px 20px;
   width: 280px;
 
-  @media screen and (max-width: 767px){
+  @media screen and (max-width: 767px) {
     overflow-y: auto;
   }
-  
+
   @media screen and (min-width: 768px) {
     display: flex;
     gap: 20px;
@@ -44,7 +44,6 @@
 }
 
 .modal__picture {
-  position: relative;
   height: 360px;
   aspect-ratio: 2 / 3;
 
@@ -141,4 +140,8 @@
 
 .modal__play:hover .modal__play-icon {
   fill: #b92f2c;
+}
+
+.modal__close {
+  position: absolute;
 }
