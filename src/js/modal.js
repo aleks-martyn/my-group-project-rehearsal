@@ -6,7 +6,7 @@ import getTrailer from './get-trailer';
 moviesEl.addEventListener('click', handleMovieClick);
 
 async function handleMovieClick(event) {
-  const movieId = event.target.dataset.mvid;
+  const movieId = event.target.dataset?.mvid;
 
   if (!movieId) return;
 
@@ -15,14 +15,21 @@ async function handleMovieClick(event) {
   const modalInstance = basicLightbox.create(movie, {
     onClose: () => {
       bodyEl.classList.remove('no-scroll');
+      document.removeEventListener('keydown', handleKeydownClick);
     },
   });
 
+  function handleKeydownClick(event) {
+    if (event.key === 'Escape') {
+      modalInstance.close();
+    }
+  }
+
   modalInstance.show(() => {
-    const basicLightboxEl = document.querySelector('.basicLightbox');
     const closeBtnEl = document.querySelector('.modal__close');
     const playBtnEl = document.querySelector('.modal__play');
 
+    document.addEventListener('keydown', handleKeydownClick);
     closeBtnEl.addEventListener('click', handleCloseBtnClick);
     playBtnEl.addEventListener('click', handlePlayBtnClick);
     bodyEl.classList.add('no-scroll');
@@ -38,9 +45,7 @@ async function handleMovieClick(event) {
     }
 
     function handleCloseBtnClick() {
-      modalInstance.close(() => {
-        bodyEl.classList.remove('no-scroll');
-      });
+      modalInstance.close();
     }
   });
 }
