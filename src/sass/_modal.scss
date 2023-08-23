@@ -90,7 +90,7 @@
   padding: 1px 10px;
   border-radius: 8px;
   color: #fff;
-  background-color: #b92f2c;
+  background-color: var(--accent-color);
 }
 
 .modal__about-title {
@@ -139,7 +139,7 @@
 }
 
 .modal__play:hover .modal__play-icon {
-  fill: #b92f2c;
+  fill: var(--accent-color);
 }
 
 .modal__close {
@@ -170,7 +170,7 @@
 }
 
 .modal__close:hover .modal__close-icon {
-  fill: #b92f2c;
+  fill: var(--accent-color);
 }
 
 .modal__iframe {
