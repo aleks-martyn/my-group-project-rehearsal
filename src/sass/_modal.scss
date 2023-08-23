@@ -4,11 +4,11 @@
 }
 
 .basicLightbox {
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: var(--modal-blbox-bg-color);
 }
 
 .basicLightbox__placeholder {
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: var(--modal-blbox-plholder-bg-color);
   color: #fff;
   border-radius: 20px;
 }
