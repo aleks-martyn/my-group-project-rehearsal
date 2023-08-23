@@ -131,7 +131,7 @@
   border: none;
   cursor: pointer;
   transform: translate(-50%, -50%);
-  transition: fill 250ms linear;
+  transition: fill var(--tra);
 }
 
 .modal__play-icon {
@@ -155,7 +155,7 @@
   border-radius: 50%;
   border: 1px solid #fff;
   background-color: transparent;
-  transition: fill 250ms linear;
+  transition: fill var(--tra);
 }
 
 .modal__close-icon {
