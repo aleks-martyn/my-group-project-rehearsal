@@ -2,7 +2,7 @@
   position: relative;
   padding: 14px 14px 20px 14px;
   border-radius: 10px;
-  background-color: #687474;
+  background-color: var(--header-bg-color);
   background-image: url(/src/images/background-mob@x1.jpg);
   background-position: center;
   background-repeat: no-repeat;
@@ -133,23 +133,23 @@
   height: 18px;
   padding-left: 3px;
   padding-right: 3px;
-  background-color: #fff;
-  border: #fff 1px solid;
+  background-color: var(--primary-btn-color);
+  border: var(--primary-btn-color) 1px solid;
   border-radius: 50px;
   transition: color var(--tra);
   cursor: pointer;
 }
 
 .check__label--dark {
-  background-color: rgb(32, 31, 31);
+  background-color: var(--secondary-btn-color);
 }
 
 .check__icon-sun {
-  fill: rgb(253, 152, 1);
+  fill: var(--icon-sun-color);
 }
 
 .check__icon-moon {
-  fill: rgb(223, 220, 87);
+  fill: var(--icon-moon-color);
 }
 
 .logo {
@@ -186,7 +186,7 @@
 .logo__text {
   font-size: 32px;
   line-height: 1.19;
-  color: #fff;
+  color: var(--primary-btn-color);
   font-style: normal;
   font-weight: 500;
 
@@ -210,7 +210,7 @@
   font-weight: 400;
   font-size: 10px;
   line-height: 12px;
-  color: #fff;
+  color: var(--primary-btn-color);
 
   @media screen and (min-width: 768px) {
     width: 150px;
