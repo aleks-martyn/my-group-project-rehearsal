@@ -4,7 +4,7 @@
   font-weight: 500;
   line-height: 1.17;
   border-radius: 100px;
-  transition: color 0.25s linear, background-color 0.25s linear;
+  transition: color var(--tra), background-color var(--tra);
 }
 
 .nav__link {
