@@ -8,13 +8,13 @@
 }
 
 .nav__link {
-  color: #000;
-  background-color: #fff;
+  color: var(--secondary-btn-color);
+  background-color: var(--primary-btn-color);
 }
 
 .nav__link--current {
-  color: #fff;
-  background-color: #000;
+  color: var(--primary-btn-color);
+  background-color: var(--secondary-btn-color);
 }
 
 .nav__link--home {
@@ -43,11 +43,11 @@
 
 .lib-btn {
   color: var(--accent-color);
-  background-color: #fff;
+  background-color: var(--primary-btn-color);
 }
 
 .lib-btn--current {
-  color: #fff;
+  color: var(--primary-btn-color);
   background-color: var(--accent-color);
 }
 
@@ -77,13 +77,13 @@
 
 .modal__btn {
   color: var(--accent-color);
-  background-color: rgba(80, 80, 80, 0.8);
+  background-color: var(--modal-btn-bg-color);
   border: 1px solid var(--accent-color);
 }
 
 .modal__btn:hover,
 .modal__btn:focus {
-  color: #fff;
+  color: var(--primary-btn-color);
   background-color: var(--accent-color);
 }
 
@@ -112,5 +112,5 @@
 }
 
 .mod-btn--border {
-  border: 1px solid #000;
+  border: 1px solid var(--secondary-btn-color);
 }
