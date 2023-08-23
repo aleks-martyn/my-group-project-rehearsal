@@ -83,7 +83,7 @@
   font-weight: 500;
   font-size: 12px;
   line-height: 1.33;
-  color: #b92f2c;
+  color: var(--accent-color);
 
   @media screen and (min-width: 768px) {
     line-height: 1.33;
@@ -102,5 +102,5 @@
   height: 12px;
   margin-left: 5px;
   margin-right: 5px;
-  background-color: #b92f2c;
+  background-color: var(--accent-color);
 }
