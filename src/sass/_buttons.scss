@@ -42,13 +42,13 @@
 }
 
 .lib-btn {
-  color: #b92f2c;
+  color: var(--accent-color);
   background-color: #fff;
 }
 
 .lib-btn--current {
   color: #fff;
-  background-color: #b92f2c;
+  background-color: var(--accent-color);
 }
 
 .lib-btn--watched {
@@ -76,15 +76,15 @@
 }
 
 .modal__btn {
-  color: #b92f2c;
+  color: var(--accent-color);
   background-color: rgba(80, 80, 80, 0.8);
-  border: 1px solid #b92f2c;
+  border: 1px solid var(--accent-color);
 }
 
 .modal__btn:hover,
 .modal__btn:focus {
   color: #fff;
-  background-color: #b92f2c;
+  background-color: var(--accent-color);
 }
 
 .modal__btn--watched {
