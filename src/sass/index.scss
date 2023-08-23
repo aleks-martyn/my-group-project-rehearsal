@@ -1,8 +1,10 @@
 @import './common';
 @import './fonts';
 
+@import './utils/vars';
 @import './base/reset.scss';
 @import './utils/visually-hidden';
+
 @import './container';
 @import './header';
 @import './card-gallery';
