@@ -10,7 +10,9 @@ export {
   fetchConfig,
 };
 
-async function fetchPopularMovies(pageNumber) {
+async function fetchPopularMovies(value) {
+  const pageNumber = value ? value : 1;
+
   const searchParams = new URLSearchParams({
     api_key: `${API_KEY}`,
     page: `${pageNumber}`,
