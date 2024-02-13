@@ -17,3 +17,9 @@ export const save = (key, value) => {
 };
 
 export const remove = key => window.localStorage.removeItem(key);
+
+export const checkMovieIsStored = (key, id) => {
+  const storedMovies = load(key) ?? [];
+
+  return storedMovies.map(({ id }) => id).includes(id);
+};
