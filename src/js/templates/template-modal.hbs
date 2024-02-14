@@ -1,6 +1,7 @@
 <div class='modal'>
   <div class='modal__picture-container'>
     <img class='modal__picture' src={{poster}} alt='icon-film' />
+
     <button class='modal__play' type='button' data-mvid={{id}}>
       <svg class='modal__play-icon' width='30' height='30'>
         <use href='./symbol-defs.svg#icon-play'></use>
@@ -13,6 +14,7 @@
 
     <div class='modal__char'>
       <span class='modal__char-name'>Vote / Votes</span>
+
       <p class='modal__char-api'>
         <span class='modal__char-api modal__vote'>{{vote}}</span>
         /
@@ -39,22 +41,31 @@
     </p>
 
     <p class='modal__about-title'>About</p>
+
     <p class='modal__about-text'>
       {{about}}
     </p>
 
     <div class='modal__btn-container'>
-      <button class='nav__el modal__btn modal__btn--watched' type='button'>
+      <button
+        class='nav__el modal__btn modal__btn--watched'
+        type='button'
+        data-mvid={{id}}
+      >
         ADD TO WATCHED
       </button>
-      <button class='nav__el modal__btn modal__btn--queue' type='button'>ADD TO
-        QUEUE</button>
+
+      <button
+        class='nav__el modal__btn modal__btn--queue'
+        type='button'
+        data-mvid={{id}}
+      >ADD TO QUEUE</button>
     </div>
   </div>
 
   <button class='modal__close' type='button'>
-    <svg class="modal__close-icon" width="30" height="30">
-      <use href="/src/images/symbol-defs.svg#icon-close"></use>
+    <svg class='modal__close-icon' width='30' height='30'>
+      <use href='/src/images/symbol-defs.svg#icon-close'></use>
     </svg>
   </button>
 </div>
