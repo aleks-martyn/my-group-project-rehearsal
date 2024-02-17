@@ -5,6 +5,8 @@ const NO_POSTER = 'https://i.ibb.co/r76r6Vt/oie-30214851-Ms-Wl-PTS0.png';
 const BASE_TRAILER_URL = 'https://www.youtube.com/embed/';
 const WATCHED_MOVIES = 'watched-movies';
 const QUEUE_MOVIES = 'queue-movies';
+const WATCHED = 'WATCHED';
+const QUEUE = 'QUEUE';
 
 export {
   API_KEY,
@@ -14,4 +16,6 @@ export {
   BASE_TRAILER_URL,
   WATCHED_MOVIES,
   QUEUE_MOVIES,
+  WATCHED,
+  QUEUE,
 };
