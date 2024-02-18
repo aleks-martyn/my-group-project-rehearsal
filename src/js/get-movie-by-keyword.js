@@ -29,12 +29,12 @@ export default async function getMovieByKeyword(searchQuery, pageNumber) {
       setScrollToUp();
       const currentPage = event.page;
       const { results } = await fetchMovieByKeyword(searchQuery, currentPage);
-      const res = await renderGallery(results);
-      return (moviesEl.innerHTML = res);
+      const markup = await renderGallery(results);
+      return (moviesEl.innerHTML = markup);
     });
 
-    const res = await renderGallery(results);
-    return (moviesEl.innerHTML = res);
+    const markup = await renderGallery(results);
+    return (moviesEl.innerHTML = markup);
   } catch (error) {
     console.log(error.message);
   }
