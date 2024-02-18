@@ -21,12 +21,12 @@ async function getPopularMovies() {
       setScrollToUp();
       const currentPage = event.page;
       const { results } = await fetchPopularMovies(currentPage);
-      const res = await renderGallery(results);
-      return (moviesEl.innerHTML = res);
+      const markup = await renderGallery(results);
+      return (moviesEl.innerHTML = markup);
     });
 
-    const res = await renderGallery(results);
-    return (moviesEl.innerHTML = res);
+    const markup = await renderGallery(results);
+    return (moviesEl.innerHTML = markup);
   } catch (error) {
     console.log(error.message);
   }
