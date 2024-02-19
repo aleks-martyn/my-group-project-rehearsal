@@ -11,7 +11,6 @@ export default async function getTrailer(movieId) {
     if (!videos?.length) {
       Report.failure("Sorry, we don't found any trailer");
     }
-    console.log(videos);
 
     const trailerKey = getTrailerKey(videos);
     const trailerPath = `${BASE_TRAILER_URL}${trailerKey}`;
