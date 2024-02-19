@@ -7,6 +7,10 @@
   background-color: var(--modal-blbox-bg-color);
 }
 
+.basicLightbox--trailer {
+  background-color: var(--modal-blbox-plholder-bg-color);
+}
+
 .basicLightbox__placeholder {
   background-color: var(--modal-blbox-plholder-bg-color);
   color: var(--modal-primary-text-color);
@@ -156,6 +160,11 @@
   border: 1px solid var(--modal-primary-text-color);
   background-color: transparent;
   transition: fill var(--tra);
+}
+
+.modal__close--trailer {
+  top: -38px;
+  right: 8px;
 }
 
 .modal__close-icon {
