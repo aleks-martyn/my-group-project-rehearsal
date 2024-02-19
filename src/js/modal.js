@@ -70,7 +70,7 @@ async function handleMovieClick(event) {
     };
 
     document.addEventListener('keydown', handleKeydownClick);
-    closeBtnEl.addEventListener('click', handleCloseBtnClick);
+    closeBtnEl.addEventListener('click', () => modalInstance.close());
     playBtnEl.addEventListener('click', handlePlayBtnClick);
     watchedBtnEl.addEventListener('click', () =>
       handleModalBtnClick(watchedParams)
@@ -86,12 +86,11 @@ async function handleMovieClick(event) {
       if (!movieId) return;
 
       const trailer = await getTrailer(movieId);
-      const trailerInstanse = basicLightbox.create(trailer);
-      trailerInstanse.show();
-    }
-
-    function handleCloseBtnClick() {
-      modalInstance.close();
+      const trailerInstanse = basicLightbox.create(trailer, {className: 'basicLightbox--trailer'});
+      trailerInstanse.show(() => {
+        const closeBtnTrailerEl = document.querySelector('.modal__close--trailer');
+        closeBtnTrailerEl.addEventListener('click', () => trailerInstanse.close())
+      });
     }
   });
 }
