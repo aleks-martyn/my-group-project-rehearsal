@@ -61,7 +61,7 @@ async function handleMovieClick(event) {
       el: watchedBtnEl,
       listName: WATCHED,
     };
-    
+
     const queueParams = {
       key: QUEUE_MOVIES,
       id: movieId,
@@ -86,10 +86,18 @@ async function handleMovieClick(event) {
       if (!movieId) return;
 
       const trailer = await getTrailer(movieId);
-      const trailerInstanse = basicLightbox.create(trailer, {className: 'basicLightbox--trailer'});
+      const trailerInstanse = basicLightbox.create(trailer, {
+        className: 'basicLightbox--trailer',
+      });
+
       trailerInstanse.show(() => {
-        const closeBtnTrailerEl = document.querySelector('.modal__close--trailer');
-        closeBtnTrailerEl.addEventListener('click', () => trailerInstanse.close())
+        const closeBtnTrailerEl = document.querySelector(
+          '.modal__close--trailer'
+        );
+
+        closeBtnTrailerEl.addEventListener('click', () =>
+          trailerInstanse.close()
+        );
       });
     }
   });
