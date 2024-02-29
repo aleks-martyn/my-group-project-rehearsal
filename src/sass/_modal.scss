@@ -9,12 +9,17 @@
 
 .basicLightbox--trailer {
   background-color: var(--modal-blbox-plholder-bg-color);
+  z-index: 1001;
 }
 
 .basicLightbox__placeholder {
   background-color: var(--modal-blbox-plholder-bg-color);
   color: var(--modal-primary-text-color);
   border-radius: 20px;
+}
+
+.basicLightbox--trailer > .basicLightbox__placeholder {
+  border-radius: 0;
 }
 
 .modal {
@@ -24,6 +29,7 @@
 
   @media screen and (max-width: 767px) {
     overflow-y: auto;
+    height: 95vh;
   }
 
   @media screen and (min-width: 768px) {
@@ -35,6 +41,10 @@
   @media screen and (min-width: 1280px) {
     width: 806px;
   }
+}
+
+.modal-trailer {
+  position: relative;
 }
 
 .modal__picture-container {
@@ -128,17 +138,20 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 150px;
-  height: 150px;
+  width: 90px;
+  height: 90px;
+  padding: 0;
   border-radius: 50%;
   background-color: transparent;
   border: none;
   cursor: pointer;
   transform: translate(-50%, -50%);
-  transition: fill var(--tra);
 }
 
 .modal__play-icon {
+  width: 70px;
+  height: 70px;
+  transition: fill var(--tra);
   fill: var(--modal-play-icon-color);
 }
 
@@ -157,9 +170,8 @@
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  border: 1px solid var(--modal-primary-text-color);
+  border: none;
   background-color: transparent;
-  transition: fill var(--tra);
 }
 
 .modal__close--trailer {
@@ -168,14 +180,8 @@
 }
 
 .modal__close-icon {
-  width: 30px;
-  height: 30px;
-
-  display: inline-block;
-
-  stroke-width: 0;
-  stroke: currentColor;
-  fill: currentColor;
+  fill: var(--primary-btn-color);
+  transition: fill var(--tra);
 }
 
 .modal__close:hover .modal__close-icon {
@@ -183,11 +189,16 @@
 }
 
 .modal__iframe {
-  width: 1200px;
-  height: 650px;
+  width: 280px;
   border: none;
-}
 
-.basicLightbox--iframe > .basicLightbox__placeholder {
-  border-radius: 0;
+  @media screen and (min-width: 768px) {
+    width: 704px;
+    height: 386px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 1200px;
+    height: 660px;
+  }
 }
