@@ -40,32 +40,12 @@ export const saveMovie = (el, movies, key) => {
 
   movies.push(movie);
   save(key, movies);
+  return movies;
 };
 
 export const removeMovie = (movieId, movies, key) => {
   const index = movies.findIndex(({ id }) => id === movieId);
   movies.splice(index, 1);
   save(key, movies);
-};
-
-export const handleModalBtnClick = ({ key, id, el, listName }) => {
-  const storedMovies = load(key) ?? [];
-
-  if (storedMovies.length > 0) {
-    const isStoredMovie = checkMovieIsStored(storedMovies, id);
-
-    if (isStoredMovie) {
-      removeMovie(id, storedMovies, key);
-      el.textContent = `ADD TO ${listName}`;
-      el.classList.remove('modal__btn--added');
-    } else {
-      saveMovie(el, storedMovies, key);
-      el.textContent = `REMOVE FROM ${listName}`;
-      el.classList.add('modal__btn--added');
-    }
-  } else {
-    saveMovie(el, storedMovies, key);
-    el.textContent = `REMOVE FROM ${listName}`;
-    el.classList.add('modal__btn--added');
-  }
+  return movies;
 };
