@@ -4,6 +4,7 @@ const errorEl = document.querySelector('.header__error');
 const moviesEl = document.querySelector('.movies');
 const container = document.getElementById('tui-pagination-container');
 const bodyEl = document.querySelector('body');
+const homeBtnEl = document.querySelector('.nav__link--home');
 const headerWatchedBtnEl = document.querySelector('.lib-btn--watched');
 const headerQueueBtnEl = document.querySelector('.lib-btn--queue');
 
@@ -16,4 +17,5 @@ export {
   bodyEl,
   headerWatchedBtnEl,
   headerQueueBtnEl,
+  homeBtnEl,
 };
