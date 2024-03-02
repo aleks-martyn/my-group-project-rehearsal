@@ -1,16 +1,21 @@
 import * as basicLightbox from 'basiclightbox';
-import { moviesEl, bodyEl } from './ref-index';
+import {
+  moviesEl,
+  bodyEl,
+  homeBtnEl,
+  headerWatchedBtnEl,
+  headerQueueBtnEl,
+} from './ref-index';
 import getMovieById from './get-movie-by-id';
 import getTrailer from './get-trailer';
-import {
-  load,
-  checkMovieIsStored,
-  handleModalBtnClick,
-} from './local-storage-functions';
+import { load, checkMovieIsStored } from './local-storage-functions';
 import { changeBtnText } from './change-btn-text';
 import { WATCHED_MOVIES, QUEUE_MOVIES, WATCHED, QUEUE } from './constants';
+import handleModalBtnClick from './handle-modal-btn-click';
 
 moviesEl.addEventListener('click', handleMovieClick);
+
+const hasActiveClass = homeBtnEl.classList.contains('nav__link--current');
 
 async function handleMovieClick(event) {
   const movieId = Number(event.target.dataset?.mvid);
@@ -73,10 +78,10 @@ async function handleMovieClick(event) {
     closeBtnEl.addEventListener('click', () => modalInstance.close());
     playBtnEl.addEventListener('click', handlePlayBtnClick);
     watchedBtnEl.addEventListener('click', () =>
-      handleModalBtnClick(watchedParams)
+      handleModalBtnClick(hasActiveClass, headerWatchedBtnEl, watchedParams)
     );
     queueBtnEl.addEventListener('click', () =>
-      handleModalBtnClick(queueParams)
+      handleModalBtnClick(hasActiveClass, headerQueueBtnEl, queueParams)
     );
     bodyEl.classList.add('no-scroll');
 
