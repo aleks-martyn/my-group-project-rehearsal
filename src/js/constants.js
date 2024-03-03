@@ -7,6 +7,7 @@ const WATCHED_MOVIES = 'watched-movies';
 const QUEUE_MOVIES = 'queue-movies';
 const WATCHED = 'WATCHED';
 const QUEUE = 'QUEUE';
+const THEME = 'theme';
 
 export {
   API_KEY,
@@ -18,4 +19,5 @@ export {
   QUEUE_MOVIES,
   WATCHED,
   QUEUE,
+  THEME,
 };
