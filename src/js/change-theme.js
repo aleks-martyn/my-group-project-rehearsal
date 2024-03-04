@@ -1,38 +1,47 @@
-import { bodyEl } from './ref-index';
-import { load } from './local-storage-functions';
-import { THEME } from './constants';
+import {
+  bodyEl,
+  labelEl,
+  checkBoxEl,
+  sunIconEl,
+  moonIconEl,
+} from './ref-index';
+import { load, save } from './local-storage-functions';
+import { THEME, DARK, LIGHT } from './constants';
 
-const check = document.querySelector('.check__input');
-const sunIconEl = document.querySelector('.check__icon-sun');
-const moonIconEl = document.querySelector('.check__icon-moon');
-const labelEl = document.querySelector('.check__label');
+let sum = 0;
 
-const changeTheme = () => {
-  console.log('Loading Theme');
+function getStoredTheme() {
   const theme = load(THEME);
 
-  if (theme !== 'dark') {
-    console.log('dark');
-    bodyEl.classList.add('dark-theme');
+  if (theme === DARK) {
+    sum = 1;
+    changeTheme();
   } else {
     return;
   }
-};
-changeTheme();
+}
 
-check.addEventListener('change', handleCheckBoxClick);
+getStoredTheme();
 
-let summ = 0;
+checkBoxEl.addEventListener('change', handleCheckBoxClick);
+
 function handleCheckBoxClick() {
-  summ += 1;
+  sum += 1;
 
-  if (summ % 2 === 1) {
-   console.log('theme', 'dark');
+  if (sum % 2 === 1) {
+    save(THEME, DARK);
   }
 
-  if (summ % 2 === 0) {
-    console.log('theme', 'light');
+  if (sum % 2 === 0) {
+    save(THEME, LIGHT);
   }
 
-  console.log('Checkbox click');
+  changeTheme();
+}
+
+function changeTheme() {
+  bodyEl.classList.toggle('dark-theme');
+  labelEl.classList.toggle('check__label--dark');
+  sunIconEl.classList.toggle('check__icon-hidden');
+  moonIconEl.classList.toggle('check__icon-hidden');
 }
