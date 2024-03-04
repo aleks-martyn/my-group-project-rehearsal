@@ -8,6 +8,8 @@ const QUEUE_MOVIES = 'queue-movies';
 const WATCHED = 'WATCHED';
 const QUEUE = 'QUEUE';
 const THEME = 'theme';
+const DARK = 'dark';
+const LIGHT = 'light';
 
 export {
   API_KEY,
@@ -20,4 +22,6 @@ export {
   WATCHED,
   QUEUE,
   THEME,
+  DARK,
+  LIGHT,
 };
