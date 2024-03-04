@@ -152,6 +152,10 @@
   fill: var(--icon-moon-color);
 }
 
+.check__icon-hidden {
+  visibility: hidden;
+}
+
 .logo {
   display: flex;
   justify-content: center;
