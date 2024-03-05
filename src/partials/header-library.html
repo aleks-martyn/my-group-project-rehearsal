@@ -20,7 +20,7 @@
     </nav>
 
     <div class="check">
-      <label class="check__label">
+      <label class="check__label check__label--dark">
         <input
           class="check__input visually-hidden"
           type="checkbox"
@@ -29,15 +29,15 @@
           aria-label="Changed theme"
         />
 
-        <svg class="check__icon-sun" width="11px" height="12px">
+        <svg
+          class="check__icon-sun check__icon-hidden"
+          width="11px"
+          height="12px"
+        >
           <use href="/src/images/symbol-defs.svg#icon-sun"></use>
         </svg>
 
-        <svg
-          class="check__icon-moon visually-hidden"
-          width="10px"
-          height="10px"
-        >
+        <svg class="check__icon-moon" width="10px" height="10px">
           <use href="/src/images/symbol-defs.svg#icon-moon"></use>
         </svg>
       </label>
