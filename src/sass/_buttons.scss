@@ -10,11 +10,21 @@
 .nav__link {
   color: var(--secondary-btn-color);
   background-color: var(--primary-btn-color);
+  transition: box-shadow var(--tra);
+
+  &:hover {
+    box-shadow: var(--btn-shadow);
+  }
 }
 
 .nav__link--current {
   color: var(--primary-btn-color);
   background-color: var(--secondary-btn-color);
+  transition: box-shadow var(--tra);
+
+  &:hover {
+    box-shadow: var(--btn-shadow);
+  }
 }
 
 .nav__link--home {
@@ -44,6 +54,11 @@
 .lib-btn {
   color: var(--accent-color);
   background-color: var(--primary-btn-color);
+  transition: box-shadow var(--tra);
+
+  &:hover {
+    box-shadow: var(--btn-shadow-inset);
+  }
 }
 
 .lib-btn--current {
@@ -79,14 +94,14 @@
   color: var(--accent-color);
   background-color: var(--modal-btn-bg-color);
   border: 1px solid var(--accent-color);
+  transition: box-shadow var(--tra);
 
   &:focus-visible {
     outline: 2px solid var(--primary-btn-color);
   }
 
   &:hover {
-    color: var(--primary-btn-color);
-    background-color: var(--hover-color);
+    box-shadow: var(--btn-shadow-inset);
   }
 }
 
