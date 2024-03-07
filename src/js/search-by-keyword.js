@@ -1,9 +1,5 @@
 import getMovieByKeyword from './get-movie-by-keyword';
-import {
-  searchFormEl,
-  inputEl,
-  errorEl,
-} from './ref-index';
+import { searchFormEl, inputEl, errorEl } from './ref-index';
 
 searchFormEl.addEventListener('submit', handleFormSubmit);
 
@@ -20,5 +16,6 @@ async function handleFormSubmit(event) {
   if (inputEl.value.trim()) {
     errorEl.style.display = 'none';
   }
-  await getMovieByKeyword(query, page);
+  getMovieByKeyword(query, page);
+  inputEl.value = '';
 }
