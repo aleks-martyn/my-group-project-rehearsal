@@ -17,5 +17,5 @@ async function handleFormSubmit(event) {
     errorEl.style.display = 'none';
   }
   getMovieByKeyword(query, page);
-  inputEl.value = '';
+  event.currentTarget.reset();
 }
