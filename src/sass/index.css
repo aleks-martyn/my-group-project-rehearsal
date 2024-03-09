@@ -894,6 +894,10 @@ div.tui-pagination {
   height: 26px;
 }
 
+.tui-pagination span.tui-page-btn {
+  width: 26px;
+}
+
 .tui-pagination a.tui-page-btn {
   width: 26px;
   font-size: 10px;
