@@ -1,3 +1,22 @@
-.tui-pagination {
-    margin-top: 10px;
+div.tui-pagination {
+  height: 26px;
+}
+
+.tui-pagination span.tui-page-btn {
+  width: 26px;
+}
+
+.tui-pagination a.tui-page-btn {
+  width: 26px;
+  font-size: 10px;
+}
+
+.tui-pagination strong.tui-page-btn {
+  width: 26px;
+  background-color: var(--accent-color);
+  font-size: 10px;
+}
+
+.tui-pagination strong.tui-is-selected:hover {
+  background-color: var(--accent-color);
 }
