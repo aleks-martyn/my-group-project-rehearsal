@@ -7,10 +7,11 @@ export default function createPagination(
   itemsPerPage,
   visiblePages
 ) {
-  return new Pagination(container, {
-    totalItems,
-    itemsPerPage,
-    visiblePages,
-    centerAlign: true,
-  });
+  if (totalItems > 0)
+    return new Pagination(container, {
+      totalItems,
+      itemsPerPage,
+      visiblePages,
+      centerAlign: true,
+    });
 }
